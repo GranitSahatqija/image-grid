@@ -1,0 +1,31 @@
+.grid {
+    width: 830px;
+    overflow: hidden;
+    margin: 50px auto;
+    &__inner {
+        margin: -5px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        > * {
+            margin: 5px;
+        }
+    }
+
+    &__item {
+        background: #ededed;
+        min-width: 100px;
+        width: 200px;
+        text-align: center;
+
+        figure {
+            margin: 0;
+            padding: 0;
+        }
+
+        figcaption {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+}
