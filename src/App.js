@@ -1,5 +1,5 @@
-import Header from './components/AppHeader'
-import Grid from './components/Grid'
+import Header from "./components/AppHeader"
+import Grid from "./components/grid/Grid"
 
 function App() {
 	return (
