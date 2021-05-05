@@ -1,4 +1,10 @@
-.app {
+.container {
+	width: 100%;
 	max-width: 980px;
 	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.app {
+	@extend .container;
 }

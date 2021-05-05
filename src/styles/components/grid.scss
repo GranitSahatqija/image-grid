@@ -1,0 +1,48 @@
+.grid {
+    width: 830px;
+    margin: 50px auto;
+    @media (max-width: 870px) {
+        width: 620px;
+    }
+
+    @media (max-width: 660px) {
+        width: 410px;
+    }
+
+    @media (max-width: 440px) {
+        width: 200px;
+    }
+
+    &__inner {
+        margin: -5px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        background: #ededed;
+        min-width: 100px;
+        width: 200px;
+        text-align: center;
+        margin: 5px;
+        figure {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            &:hover {
+                transform: translateY(-4px);
+            }
+        }
+
+        figcaption {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+}

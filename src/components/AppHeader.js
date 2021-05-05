@@ -1,7 +1,11 @@
+import '../styles/components/app-header.scss';
+
 const Header = () => {
     return (
         <header className="app-header">
-            <span>IMAGE GRID</span>
+            <div className="container">
+                <span>GALLERY GRID</span>
+            </div>
         </header>
     )
 }

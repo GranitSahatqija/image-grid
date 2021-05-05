@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
-import { getGridItems } from '../../helpers'
-import GridItem from './GridItem'
-import GridPopup from './GridPopup'
+import { useState, Suspense, lazy } from 'react';
+import { getGridItems } from '../../helpers';
+import GridItem from './GridItem';
+import '../../styles/components/grid.scss';
+
+const GridPopup = lazy(() => import('./GridPopup'));
 
 const Grid = () => {
     const gridItems = getGridItems(18);
@@ -16,7 +18,7 @@ const Grid = () => {
     }
 
     return (
-        <div className="grid">
+        <section className="grid">
             <div className="grid__inner">
                 {gridItems.map((item) => {
                     return (
@@ -24,8 +26,12 @@ const Grid = () => {
                     )
                 })}
             </div>
-            {popupItem && <GridPopup item={popupItem} close={closePopup} />}
-        </div>
+            {popupItem && 
+                <Suspense fallback={<div>Loading...</div>}>
+                    <GridPopup item={popupItem} close={closePopup} />
+                </Suspense>
+            }
+        </section>
     )
 }
 

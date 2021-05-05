@@ -1,11 +1,21 @@
-import Header from "./components/AppHeader"
-import Grid from "./components/grid/Grid"
+import { Suspense, lazy } from 'react';
+
+const Header = lazy(() => import('./components/AppHeader'));
+const Grid = lazy(() => import('./components/grid/Grid'));
 
 function App() {
 	return (
 		<div className="app">
-			<Header />
-			<Grid />
+			<Suspense fallback={<div>Loading header...</div>}>
+				<Header />
+			</Suspense>
+			<section className="container">
+				<h1>GALLERY GRID</h1>
+				<p>Simple gallery grid developed in React</p>
+			</section>
+			<Suspense fallback={<div>Loading grid...</div>}>
+				<Grid />
+			</Suspense>
 		</div>
 	);
 }
