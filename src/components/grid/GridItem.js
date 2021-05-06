@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const GridItem = (props) => {
     const { item, open } = props
 
@@ -9,6 +11,11 @@ const GridItem = (props) => {
             </figure>
         </div>
     )
+}
+
+GridItem.propTypes = {
+    item: PropTypes.object.isRequired,
+    open: PropTypes.func.isRequired
 }
 
 export default GridItem

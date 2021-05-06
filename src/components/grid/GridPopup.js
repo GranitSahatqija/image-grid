@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import '../../styles/components/grid-popup.scss';
 
 const GridPopup = ({ item, close }) => {
@@ -37,6 +38,11 @@ const GridPopup = ({ item, close }) => {
             </div>
         </div>
     )
+}
+
+GridPopup.propTypes = {
+    item: PropTypes.object.isRequired,
+    close: PropTypes.func.isRequired
 }
 
 export default GridPopup
