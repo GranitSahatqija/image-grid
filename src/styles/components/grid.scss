@@ -25,6 +25,10 @@
         width: 200px;
         text-align: center;
         margin: 5px;
+        &.animation-supported {
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
         figure {
             margin: 0;
             padding: 0;
@@ -43,6 +47,10 @@
         figcaption {
             margin-top: 5px;
             margin-bottom: 5px;
+        }
+        
+        &.fade-in {
+            opacity: 1;
         }
     }
 }
